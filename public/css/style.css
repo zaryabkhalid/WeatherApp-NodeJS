@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100;0,8..30,200;0,8..30,300;0,8..30,400;0,8..30,500;0,8..30,600;0,8..30,700;0,8..30,800;0,8..30,900;1,8..30,100;1,8..30,200;1,8..30,300;1,8..30,400;1,8..30,500;1,8..30,600;1,8..30,700;1,8..30,800;1,8..30,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Piazzolla", serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0e0;
+}
+
+/********************************************** Navbar *****************/
+
+.nav-container {
+  height: 90px;
+  background-color: #1a78c2;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.nav-items-container {
+  height: 100%;
+  margin: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  color: white;
+}
+.logo > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-items-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-items-list > li {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-items-list > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-items-list > li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 300ms, trasnsform 300ms;
+}
+
+.nav-items-list > li:is(:hover, :focus)::after {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+/********************************************** Hero Section ***********/
+
+.hero-container {
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-div {
+  width: 50%;
+}
+
+.text-contain > h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.text-contain > h2::first-letter {
+  font-size: 3rem;
+  color: #1a78c2;
+  font-weight: 700;
+}
+
+.text-contain > h1 {
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+.text-contain > h1 > span {
+  color: #1a78c2;
+  font-weight: 700;
+}
+
+.text-contain > div {
+  margin-top: 2.5rem;
+}
+
+.check-btn {
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  background-color: #1a78c2;
+  border: none;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  cursor: pointer;
+}
+
+.check-btn:hover {
+  border: none;
+  border-radius: 25px;
+  background-color: transparent;
+  color: black;
+  box-shadow: 0 8px 6px -6px #1a78c2;
+  outline: none;
+  transition: 300ms;
+}
+
+.text-contain {
+  max-width: 600px;
+  margin: auto;
+}
+
+.img-section {
+  width: 50%;
+}
+.img-wrapper {
+  max-width: 680px;
+  margin: auto;
+}
+.img-wrapper > img {
+  width: 100%;
+}
+
+/**************************************************** Footer */
+
+footer {
+  width: 100%;
+  background-color: #1a78c2;
+  margin-top: auto;
+}
+
+footer > p {
+  text-align: center;
+  color: white;
+  line-height: 3rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/*************************************************** weather page styling  */
+
+.weather_container {
+  width: 50%;
+  margin: auto;
+}
+
+.form-container {
+  text-align: center;
+}
+.form {
+  padding: 15px;
+}
+input[type="text"] {
+  width: 550px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+}
+
+input[type="text"]:focus {
+  background-color: #1e202b;
+  color: white;
+  transition: all 0.5s;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+input[type="text"]:focus::placeholder {
+  color: white;
+}
+
+input[type="submit"] {
+  padding: 5px 30px;
+  background-color: #1a78c2;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.tempInfo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.top-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-layer {
+  line-height: 2.5rem;
+}
+
+#temp,
+#temp_real_val {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#city_name {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.data_info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.fa {
+  color: #1a78c2;
+  font-size: 1.5rem;
+}
+
+.data_hide {
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.went-wrong {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
